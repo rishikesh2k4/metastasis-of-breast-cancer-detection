@@ -1,0 +1,45 @@
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
+import matplotlib.pyplot as plt
+
+data = pd.read_csv('jvtm241.csv')
+data
+
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+data.Tumour_Stage=le.fit_transform(data.Tumour_Stage)
+data
+
+X = data.drop('Tumour_Stage', axis=1)  # Features
+y = data['Tumour_Stage']  # Target variable
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+  rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
+rf_model.fit(X_train, y_train)\
+y_pred = rf_model.predict(X_test)
+y_pred
+
+mse = mean_squared_error(y_test, y_pred)
+print("Mean Squared Error:", mse)
+
+  X_train
+
+X_test
+
+y_train
+
+y_test
+
+new_data={'Age':[63],'Protein1':[-0.523],'Protein2':[1.5526],'Protein3':[-0.1652],'Protein4':[0.276],'ER status':[1],'PR status':[1],'HER2 status':[0]}
+new_df = pd.DataFrame(new_data)
+predictions = rf_model.predict(new_df)
+print("Predictions:", predictions)
+
+  new_data1={'Age':[38],'Protein1':[-0.268450],'Protein2':[0.19515],'Protein3':[-1.024700],'Protein4':[0.101720],'ER status':[1],'PR status':[1],'HER2 status':[0]}
+new_df1 = pd.DataFrame(new_data1)
+predictions1 = rf_model.predict(new_df1)
+print("Predictions:", predictions1)
+
+  
