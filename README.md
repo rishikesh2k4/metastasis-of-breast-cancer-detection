@@ -39,3 +39,9 @@ This work was carried out collaboratively by a group of five Computer Science an
 
 ## 👨🏻‍💻 Result
 
+
+![CLI Output](https://github.com/rishikesh2k4/metastasis-of-breast-cancer-detection/blob/main/others/breastcancerop1.png)
+
+![CLI Output](https://github.com/rishikesh2k4/metastasis-of-breast-cancer-detection/blob/main/others/breastcancerop2.png)
+
+![CLI Output](https://github.com/rishikesh2k4/metastasis-of-breast-cancer-detection/blob/main/others/breastcancerop3.png)
