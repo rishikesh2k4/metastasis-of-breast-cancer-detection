@@ -31,6 +31,11 @@ This project aims to predict **breast cancer tumour stages** using machine learn
 The dataset used (`jvtm241.csv`) is a **small-scale example dataset** with limited samples. Due to difficulty in accessing larger real-world cancer datasets, this project demonstrates **model pipeline design** more than performance accuracy.
 
 
+## 👥 Team Members
+
+This work was carried out collaboratively by a group of five Computer Science and Design students for a machine learning challenge conducted under JVTM.
+
+
 
 ## 👨🏻‍💻 Result
 
